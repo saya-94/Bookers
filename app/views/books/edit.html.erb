@@ -1,0 +1,25 @@
+<h1 class="headline" id="edit_page"><strong>Editing Book</strong></h1>
+
+<!-- form_for部分 -->
+<%= form_for @book do |f| %>
+
+  <div class="form">
+    <p class="newbook-title">Title</p>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="form">
+    <p class="newbook-body">Body</p>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="form">
+    <%= f.submit 'Update Book' %>
+  </div>
+
+
+  <%= link_to "Show", book_path %>
+  |
+  <%= link_to "Back", books_path %>
+
+<% end %>
